@@ -1,5 +1,5 @@
 import XCTest
-@testable import Hmm
+@testable import HiddenMarkovModel
 
 final class Hmm2Test: XCTestCase {
     func testViterbi() {
@@ -16,7 +16,7 @@ final class Hmm2Test: XCTestCase {
         var states : Set<String> = Set<String>()
         states.insert("HOT")
         states.insert("COLD")
-        let hmm2 : Hmm2<String, Int> = Hmm2<String, Int>(states: states, observations: observations, emittedSymbols: emittedSymbols)
+        let hmm2: Hmm2<String, Int> = Hmm2<String, Int>(states: states, observations: observations, emittedSymbols: emittedSymbols)
         var observed : [Int] = [1, 1, 1, 1, 1, 1]
         var observedStates : [String] = hmm2.viterbi(s: observed)
         XCTAssertEqual("COLD", observedStates[0])

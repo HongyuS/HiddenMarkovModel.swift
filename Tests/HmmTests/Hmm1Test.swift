@@ -1,5 +1,5 @@
 import XCTest
-@testable import Hmm
+@testable import HiddenMarkovModel
 
 final class Hmm1Test: XCTestCase {
     func testViterbi() {
